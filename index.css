@@ -78,7 +78,6 @@ body{
     border-radius:25px;
     padding: 0.5rem 1rem;
     overflow: hidden;
-    transition: 200ms ease-in;
 }
 #sedans-button:hover{
     background: hsl(31, 100%, 35%);
@@ -97,7 +96,6 @@ body{
     border-radius:25px;
     padding: 0.5rem 1rem;
     overflow: hidden;
-    transition: 200ms ease-in;
 }
 #suvs-button:hover{
     background: hsl(184, 100%, 15%);
@@ -116,7 +114,6 @@ body{
     border-radius:25px;
     padding: 0.5rem 1rem;
     overflow: hidden;
-    transition: 200ms ease-in;
 }
 #luxury-button:hover{
     background:  hsl(179, 100%, 9%);
