@@ -1,0 +1,183 @@
+:root{
+    --clr-bright-orange: hsl(31, 77%, 52%);
+    --clr-dark-cyan: hsl(184, 100%, 22%);
+    --clr-very-dark-cyan: hsl(179, 100%, 13%);
+
+    --clr-transparent-white: hsla(0, 0%, 100%, 0.75);
+    --clr-very-light-gray: hsl(0, 0%, 95%);
+
+    --clr-lexend-deca:'Lexend Deca', sans-serif;
+    --clr-big-shoulders-display:'Big Shoulders Display', "cursive";
+}
+*{
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+.desktop{
+    display: none;
+}
+body{
+    font-size: 15px;
+    background: var(--clr-very-light-gray);
+    height: 100vh;
+    display: grid;
+    place-items: center;
+}
+.container{
+    width: 100%;
+    padding: 15% 5% 15% 5%;
+    overflow: hidden;
+}
+.container-content{
+    border-radius: 5px;
+    overflow: hidden;
+    max-width: 450px;
+}
+.car-logo-container{
+    width: max-content;
+}
+.car-logo{
+    margin-top: 1.5rem;
+    transition: 300ms;
+}
+.car-logo-container:hover .car-logo{
+    transform: translatex(90%);
+}
+.text-container{
+    margin-top: 1.5rem;
+    max-width: 300px;
+    margin-left: 5%;
+}
+.heading{
+    color: var(--clr-very-light-gray);
+    font-family: var(--clr-big-shoulders-display);
+    font-weight: 700;
+    padding-bottom: 1.5rem;
+    font-size: 2rem;
+}
+.para{
+    color: var(--clr-transparent-white);
+    font-family: var(--clr-lexend-deca);
+    font-size: 0.8rem;
+    line-height: 1.3rem;
+}
+.button-container{
+    margin-top: 2rem;
+}
+.first{
+    background-color: var(--clr-bright-orange);
+    padding: 10%;
+}
+#sedans-button{
+    font-size: 0.7rem;
+    color: var(--clr-bright-orange);
+    background: var(--clr-very-light-gray);
+    text-decoration: none;
+    font-family: var(--clr-lexend-deca);
+    border-radius:25px;
+    padding: 0.5rem 1rem;
+    overflow: hidden;
+    transition: 200ms ease-in;
+}
+#sedans-button:hover{
+    background: hsl(31, 100%, 35%);
+    color: var(--clr-transparent-white);
+}
+.second{
+    background: var(--clr-dark-cyan);
+    padding: 10%;
+}
+#suvs-button{
+    font-size: 0.7rem;
+    color: var(--clr-dark-cyan);
+    background: var(--clr-very-light-gray);
+    text-decoration: none;
+    font-family: var(--clr-lexend-deca);
+    border-radius:25px;
+    padding: 0.5rem 1rem;
+    overflow: hidden;
+    transition: 200ms ease-in;
+}
+#suvs-button:hover{
+    background: hsl(184, 100%, 15%);
+    color: var(--clr-transparent-white);
+}
+.third{
+    background: var(--clr-very-dark-cyan);
+    padding: 10%;
+}
+#luxury-button{
+    font-size: 0.7rem;
+    color: var(--clr-very-dark-cyan);
+    background: var(--clr-very-light-gray);
+    text-decoration: none;
+    font-family: var(--clr-lexend-deca);
+    border-radius:25px;
+    padding: 0.5rem 1rem;
+    overflow: hidden;
+    transition: 200ms ease-in;
+}
+#luxury-button:hover{
+    background:  hsl(179, 100%, 9%);
+    color: var(--clr-transparent-white);
+}
+.attribution{
+    text-align: center;
+    font-family: var(--clr-lexend-deca);
+    padding-bottom: 10px;
+}
+.attribution>a{
+    text-decoration: none;
+    color: black;
+}
+@media(min-width:850px){
+    .mobile{
+        display: none;
+    }
+    .desktop{
+        display: initial;
+    }
+    .container-d{
+        display: grid;
+        grid-template-columns: repeat(3,1fr);
+        border-radius: 5px;
+        overflow: hidden;
+    }
+    .button-container-d{
+        margin-top: 5rem;
+        padding-bottom: 2rem;
+    }
+    .text-container-d{
+        margin-top: 1.5rem;
+        max-width: 250px;
+        margin-left: 5%;
+    }
+    .attribution-d{
+        font-family: var(--clr-lexend-deca);
+        text-align: center;
+        margin-top: 20px;
+    }
+    .attribution-d>a{
+        text-decoration: none;
+        color: black;
+        position: relative;
+    }
+    .attribution-d>a::after{
+        content: "";
+        background: black;
+        position: absolute;
+        height: 3px;
+        width: 100%;
+        top: 100%;
+        right: 0;
+        left: 0;
+        bottom: 0;
+        transform-origin: center;
+        transform: scaleX(0);
+        transition: 300ms;
+    }
+    .attribution-d>a:hover::after{
+        transform: scaleX(1);
+    }
+}
